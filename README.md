@@ -10,11 +10,7 @@ To use the banking API, you will have to signup to obtain username and password.
 
 ```
 
-  curl \
-    -X POST \
-    -H "Content-Type: application/json" \
-    -d '{"username": "username", "password": "password"}' \
-    http://localhost:8000/api/token/
+  curl -X POST -H "Content-Type: application/json" -d "{\"username\": \"<username>\", \"password\": \"<password>\"}" http://localhost:8000/api/token/
 ```
 
 The response obtained should look similar to below one:
@@ -38,11 +34,7 @@ refresh token to obtain another access token:
 
 ```
 
-  curl \
-    -X POST \
-    -H "Content-Type: application/json" \
-    -d '{"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImNvbGRfc3R1ZmYiOiLimIMiLCJleHAiOjIzNDU2NywianRpIjoiZGUxMmY0ZTY3MDY4NDI3ODg5ZjE1YWMyNzcwZGEwNTEifQ.aEoAYkSJjoWH1boshQAaTkf8G3yn0kapko6HFRt7Rh4"}' \
-    http://localhost:8000/api/token/refresh/
+  curl -X POST -H "Content-Type: application/json" -d "{\"refresh\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImNvbGRfc3R1ZmYiOiLimIMiLCJleHAiOjIzNDU2NywianRpIjoiZGUxMmY0ZTY3MDY4NDI3ODg5ZjE1YWMyNzcwZGEwNTEifQ.aEoAYkSJjoWH1boshQAaTkf8G3yn0kapko6HFRt7Rh4\"}" http://localhost:8000/api/token/refresh/
 ```
 The response obtained will look similar to below one:
 
