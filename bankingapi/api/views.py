@@ -24,18 +24,6 @@ class GetBankView(generics.ListAPIView):
         return queryset
 
 
-class CreateBankView(generics.ListCreateAPIView):
-    """This class defines the create behavior of our rest api."""
-    queryset = Banks.objects.all()
-    serializer_class = BanksSerializer
-    authentication_classes = [JWTAuthentication]
-    permission_classes = [permissions.IsAuthenticated]
-
-    def perform_create(self, serializer):
-        """Save the post data when creating a new bucketlist."""
-        serializer.save()
-
-
 class DetailsBankView(generics.RetrieveUpdateDestroyAPIView):
     """This class handles the http GET, PUT and DELETE requests."""
 
@@ -43,18 +31,6 @@ class DetailsBankView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = BanksSerializer
     authentication_classes = [JWTAuthentication]
     permission_classes = [permissions.IsAuthenticated]
-
-
-class CreateBranchView(generics.ListCreateAPIView):
-    """This class defines the create behavior of our rest api."""
-    queryset = Branches.objects.all()
-    serializer_class = BranchSerializer
-    authentication_classes = [JWTAuthentication]
-    permission_classes = [permissions.IsAuthenticated]
-
-    def perform_create(self, serializer):
-        """Save the post data when creating a new bucketlist."""
-        serializer.save()
 
 
 class DetailsBranchView(generics.RetrieveUpdateDestroyAPIView):
