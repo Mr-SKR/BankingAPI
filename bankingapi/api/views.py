@@ -15,11 +15,12 @@ class GetBankView(generics.ListAPIView):
         bank_name = self.request.query_params.get('bank', None)
         city = self.request.query_params.get('city', None)
         if bank_name and city:
-            queryset = queryset.filter(bank__name=bank_name, city=city)
+            queryset = queryset.filter(bank__name=bank_name.upper(),
+                                       city=city.upper())
         elif bank_name:
-            queryset = queryset.filter(bank__name=bank_name)
+            queryset = queryset.filter(bank__name=bank_name.upper())
         elif city:
-            queryset = queryset.filter(city=city)
+            queryset = queryset.filter(city=city.upper())
         return queryset
 
 
