@@ -6,7 +6,6 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 
 
 class GetBankView(generics.ListAPIView):
-    queryset = Branches.objects.all()
     serializer_class = BranchSerializer
     authentication_classes = [JWTAuthentication]
     permission_classes = [permissions.IsAuthenticated]
