@@ -58,7 +58,7 @@ where 'ABHY0065001' is the IFSC code
 
 curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiY29sZF9zdHVmZiI6IuKYgyIsImV4cCI6MTIzNTY3LCJqdGkiOiJjNzE4ZTVkNjgzZWQ0NTQyYTU0NWJkM2VmMGI0ZGQ0ZSJ9.ekxRxgb9OKmHkfy-zs1Ro_xs1eMLXiR17dIDBVxeT-w" http://bankingapi.ap-south-1.elasticbeanstalk.com/?bank=hdfc+bank&city=bangalore
 ```
-Spaces must be replaces wither with '+' or '%20'. Example: hdfc+bank
+Spaces must be replaces either with '+' or '%20'. Example: hdfc+bank
 > All the above API calls support limit & offset parameters
 ```
 
