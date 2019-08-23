@@ -6,10 +6,10 @@ from .views import (
 )
 
 urlpatterns = {
-    url(r'^banks(?P<pk>[0-9]+)/$',
-        DetailsBankView.as_view(), name="details"),
-    path('', GetBankView.as_view(), name="get"),
-    url(r'^branch/(?P<pk>[A-Z0-9]{11})/$',
+    # url(r'^banks(?P<pk>[0-9]+)$',
+    #     DetailsBankView.as_view(), name="details"),
+    url(r'^bank$', GetBankView.as_view(), name="get"),
+    url(r'^branch/(?P<pk>[A-Z0-9]{11})$',
         DetailsBranchView.as_view(), name="details"),
 }
 

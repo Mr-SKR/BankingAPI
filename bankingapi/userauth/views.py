@@ -22,7 +22,7 @@ def sign_up(request):
             sign_up_instance.set_password(raw_password=password)
             sign_up_instance.save()
             # redirect to a new URL:
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect('/api/token/')
     else:
         form = SignUpForm()
 

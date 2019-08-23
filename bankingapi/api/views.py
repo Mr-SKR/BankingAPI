@@ -10,9 +10,9 @@ class GetBankView(generics.ListAPIView):
     authentication_classes = [JWTAuthentication]
     permission_classes = [permissions.IsAuthenticated]
 
-    def get_queryset(self):
+    def get_queryset(self, bank=None):
         queryset = Branches.objects.all()
-        bank_name = self.request.query_params.get('bank', None)
+        bank_name = self.request.query_params.get('name', None)
         city = self.request.query_params.get('city', None)
         if bank_name and city:
             queryset = queryset.filter(bank__name=bank_name.upper(),

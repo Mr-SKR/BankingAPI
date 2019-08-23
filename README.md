@@ -4,7 +4,7 @@ Usage
 -----
 
 To use the banking API, you will have to signup to obtain username and password.
-Click here to [SignUp](http://bankingapi.ap-south-1.elasticbeanstalk.com/signup)
+Click here to [SignUp](http://bankingapi.ap-south-1.elasticbeanstalk.com)
 Or use the following credentials:
 > username: test
 
@@ -50,13 +50,13 @@ Example API calls:
 > GET API to fetch a bank details, given branch IFSC code
 ```
 
-curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiY29sZF9zdHVmZiI6IuKYgyIsImV4cCI6MTIzNTY3LCJqdGkiOiJjNzE4ZTVkNjgzZWQ0NTQyYTU0NWJkM2VmMGI0ZGQ0ZSJ9.ekxRxgb9OKmHkfy-zs1Ro_xs1eMLXiR17dIDBVxeT-w" http://bankingapi.ap-south-1.elasticbeanstalk.com/branch/ABHY0065001
+curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiY29sZF9zdHVmZiI6IuKYgyIsImV4cCI6MTIzNTY3LCJqdGkiOiJjNzE4ZTVkNjgzZWQ0NTQyYTU0NWJkM2VmMGI0ZGQ0ZSJ9.ekxRxgb9OKmHkfy-zs1Ro_xs1eMLXiR17dIDBVxeT-w" http://bankingapi.ap-south-1.elasticbeanstalk.com/api/branch/ABHY0065001
 ```
 where 'ABHY0065001' is the IFSC code
 > GET API to fetch all details of branches, given bank name and a city
 ```
 
-curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiY29sZF9zdHVmZiI6IuKYgyIsImV4cCI6MTIzNTY3LCJqdGkiOiJjNzE4ZTVkNjgzZWQ0NTQyYTU0NWJkM2VmMGI0ZGQ0ZSJ9.ekxRxgb9OKmHkfy-zs1Ro_xs1eMLXiR17dIDBVxeT-w" http://bankingapi.ap-south-1.elasticbeanstalk.com/?bank=hdfc+bank&city=bangalore
+curl -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX3BrIjoxLCJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiY29sZF9zdHVmZiI6IuKYgyIsImV4cCI6MTIzNTY3LCJqdGkiOiJjNzE4ZTVkNjgzZWQ0NTQyYTU0NWJkM2VmMGI0ZGQ0ZSJ9.ekxRxgb9OKmHkfy-zs1Ro_xs1eMLXiR17dIDBVxeT-w" http://bankingapi.ap-south-1.elasticbeanstalk.com/api/bank?name=hdfc+bank&city=bangalore
 ```
 Spaces must be replaced either with '+' or '%20'. Example: hdfc+bank
 > All the above API calls support limit & offset parameters
