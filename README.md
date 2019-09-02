@@ -3,7 +3,7 @@
 Usage
 -----
 
-Set environment variables for SECRET_KEY, RDS_DB_NAME, RDS_USERNAME, RDS_PASSWORD, RDS_HOSTNAME, RDS_PORT that gets referenced in settings.py(connects to postgres by default. Change that if you want)
+Set environment variables for SECRET_KEY, RDS_DB_NAME, RDS_USERNAME, RDS_PASSWORD, RDS_HOSTNAME, RDS_PORT that gets referenced in [settings.py](https://github.com/Mr-SKR/BankingAPI/blob/master/bankingapi/bankingapi/settings.py)(connects to postgres by default. Change that if you want)
 
 
 Runserver
